@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use Kancil\Core\BaseController;
@@ -9,7 +8,6 @@ use Kancil\Core\Auth;
 
 class Home extends BaseController
 {
-
     public function __construct()
     {
         parent::__construct();
@@ -22,8 +20,6 @@ class Home extends BaseController
         $db = new Database();
 
         $auth->userLogin($db, "piepin", md5("password"));
-
-        //pd($_SESSION);
 
         if (!empty($id))
         {
