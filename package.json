@@ -1,3 +1,13 @@
-
+{
+    "package": {
+        "name": "teknokode/kancil",
+        "version": "1.0.0",
+        "source": {
+          "url": "https://github.com/teknokode/kancil.git",
+          "type": "git",
+          "reference": "main"
+        }
+    }
+}
 
 
