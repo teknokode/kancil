@@ -508,7 +508,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/me/WEB/kancil-framework",
-                "reference": "aa560fad0caf53e8be30fc9f68fc4407b984eb6c"
+                "reference": "bdc5035d1049bddb6add50bf6cac0047509a7d9e"
             },
             "require": {
                 "firebase/php-jwt": "^6.10",
