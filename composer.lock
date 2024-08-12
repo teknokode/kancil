@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73e17e76939be6bfbdad5fa8a982c04e",
+    "content-hash": "ed95b0c082dce2ed88d3c1160ee1e50f",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -505,25 +505,34 @@
         {
             "name": "teknokode/kancil-framework",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/teknokode/kancil-framework.git",
+                "reference": "b28dcea1ebfd25da374e33463b9703b90b05c563"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/me/WEB/kancil-framework",
-                "reference": "bdc5035d1049bddb6add50bf6cac0047509a7d9e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/teknokode/kancil-framework/zipball/b28dcea1ebfd25da374e33463b9703b90b05c563",
+                "reference": "b28dcea1ebfd25da374e33463b9703b90b05c563",
+                "shasum": ""
             },
             "require": {
                 "firebase/php-jwt": "^6.10",
                 "salesforce/handlebars-php": "^3.0",
                 "vlucas/phpdotenv": "^5.6"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Kancil\\": "/home/me/WEB/kancil-framework/system/"
+                    "Kancil\\": "system/"
                 }
             },
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/teknokode/kancil-framework/tree/main",
+                "issues": "https://github.com/teknokode/kancil-framework/issues"
+            },
+            "time": "2024-08-12T15:44:18+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

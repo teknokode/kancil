@@ -10,8 +10,8 @@
   },
   "repositories": [
     {
-        "type": "vcs",
-        "url": "https://github.com/teknokode/kancil-framework"
+      "type": "path",
+      "url": "/home/me/WEB/kancil-framework"
     }
   ]
 

@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Autoload
-require_once("./vendor/autoload.php");
+require_once ("./vendor/autoload.php");
 //require_once("app/Functions/helpers.php");
 
 use Kancil\Core\Router;
@@ -24,7 +24,7 @@ foreach( $_ENV as $key => $env )
 }
 
 // Mulai router
-$router = new Router;
+$router = new \Kancil\Core\Router;
 
 // Definisikan route (Todo: File terpisah)
 require_once(__DIR__."/routes.php");
