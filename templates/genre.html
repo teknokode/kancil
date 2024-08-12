@@ -1,0 +1,15 @@
+<h2>All genres:</h2>
+{{#each genres}}
+    {{.}}
+{{/each}}
+
+
+{{#each cars}}
+    <h3>{{category}}</h3>
+    Total: {{count}}
+    <ul>
+    {{#each list}}
+        {{.}}
+    {{/each}}
+    </ul>
+{{/each}}

@@ -1,0 +1,17 @@
+{
+  "name": "teknokode/kancil",
+  "require": {
+    "teknokode/kancil-framework": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/home/me/WEB/kancil-framework"
+    }
+  ]
+}
