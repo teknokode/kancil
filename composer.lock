@@ -508,12 +508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/teknokode/kancil-framework.git",
-                "reference": "801c1154833057f1a7a7178948421fb48f9bbfca"
+                "reference": "0f672c038d7a7c94ea1bc8c034541e3703304183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/teknokode/kancil-framework/zipball/801c1154833057f1a7a7178948421fb48f9bbfca",
-                "reference": "801c1154833057f1a7a7178948421fb48f9bbfca",
+                "url": "https://api.github.com/repos/teknokode/kancil-framework/zipball/0f672c038d7a7c94ea1bc8c034541e3703304183",
+                "reference": "0f672c038d7a7c94ea1bc8c034541e3703304183",
                 "shasum": ""
             },
             "require": {
@@ -535,7 +535,7 @@
                 "source": "https://github.com/teknokode/kancil-framework/tree/main",
                 "issues": "https://github.com/teknokode/kancil-framework/issues"
             },
-            "time": "2024-08-13T07:16:20+00:00"
+            "time": "2024-08-13T14:36:16+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

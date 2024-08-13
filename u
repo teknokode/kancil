@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+php7.4 /usr/local/bin/composer update
+
