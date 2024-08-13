@@ -10,3 +10,4 @@ $router->get('/skema', "App\Controllers\Home::index");
 $router->get('/api', "App\Controllers\Testapi::index");
 $router->get('/api/auth', "App\Controllers\Testapi::auth");
 $router->get('/api/skema', "App\Controllers\Testapi::skema");
+$router->get('/api/token', "App\Controllers\Testapi::token");
