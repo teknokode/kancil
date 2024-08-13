@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpdox xmlns="http://xml.phpdox.net/config">
+  <project name="Kancil" source="${basedir}/app" workdir="/home/me/Downloads/build/api/xml">
+    <collector backend="parser" />
+    <generator output="/home/me/Downloads/build/api">
+      <build engine="html" output="html"/>
+    </generator>
+  </project>
+</phpdox>
