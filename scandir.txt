@@ -1,0 +1,9 @@
+/home/me/WEB/kancil/app/Controllers|Home.php
+/home/me/WEB/kancil/app/Controllers|Testapi.php
+/home/me/WEB/kancil/app/Filters|Login.php
+/home/me/WEB/kancil|index.php
+/home/me/WEB/kancil|routes.php
+/home/me/WEB/kancil|scandir.php
+/home/me/WEB/kancil|test-hbs.php
+/home/me/WEB/kancil|test-jwt.php
+/home/me/WEB/kancil|test-medoo.php
