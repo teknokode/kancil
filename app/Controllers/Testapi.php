@@ -48,7 +48,7 @@ class Testapi
 
         } else {
 
-            return $api->responseError( "Username atau password tidak valid", 401);
+            return $this->api->responseError( "Username atau password tidak valid", 401);
 
         }
     }
