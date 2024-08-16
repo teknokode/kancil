@@ -20,7 +20,7 @@ class Testapi
     public function index()
     {
         $json = $this->api->requestJSON();
-        print $this->api->responseJSON( $json );
+        return $this->api->responseJSON( $json );
     }
 
     public function auth()
@@ -44,11 +44,11 @@ class Testapi
             ];
 
             $jwt = $auth->createJwtToken( $payload );
-            print $this->api->responseJSON( ["token" => $jwt ] );
+            return $this->api->responseJSON( ["token" => $jwt ] );
 
         } else {
 
-            print $api->responseError( "Username atau password tidak valid", 401);
+            return $api->responseError( "Username atau password tidak valid", 401);
 
         }
     }
@@ -64,7 +64,7 @@ class Testapi
         ];
 
         $jwt = JWT::encode($payload, SECRET_KEY, 'HS256');
-        print $this->api->responseJSON( ["token" => $jwt ] );
+        return $this->api->responseJSON( ["token" => $jwt ] );
     }
 
     public function skema()
@@ -72,6 +72,6 @@ class Testapi
         $db = new Database;
 
         $data = $db->select("skema","*");
-        print $this->api->responseJSON( $data );
+        return $this->api->responseJSON( $data );
     }
 }
