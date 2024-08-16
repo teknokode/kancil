@@ -71,6 +71,9 @@ class Testapi
     {
         $db = new Database;
 
+        //print_r($_SERVER);
+        //die();
+
         $data = $db->select("tugas","*");
         return $this->api->responseJSON( $data );
     }

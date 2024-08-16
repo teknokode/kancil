@@ -15,6 +15,11 @@ class Home extends BaseController
 
     public function index( $id = "")
     {
+
+        //print "<pre>";
+        //print_r($_SERVER);
+        //die();
+
         $auth = new Auth;
         $parser = new Parser();
         $db = new Database();
