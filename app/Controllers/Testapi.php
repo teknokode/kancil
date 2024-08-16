@@ -67,11 +67,11 @@ class Testapi
         return $this->api->responseJSON( ["token" => $jwt ] );
     }
 
-    public function skema()
+    public function tugas()
     {
         $db = new Database;
 
-        $data = $db->select("skema","*");
+        $data = $db->select("tugas","*");
         return $this->api->responseJSON( $data );
     }
 }
