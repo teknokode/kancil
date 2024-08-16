@@ -19,13 +19,13 @@ class Home extends BaseController
         $parser = new Parser();
         $db = new Database();
 
-        $auth->userLogin($db, "piepin", md5("password"));
+        $auth->userLogin($db, "demo", md5("password"));
 
         if (!empty($id))
         {
-            $rows["skemas"] = $db->find("skema", "skema_id='$id'");
+            $rows["tugas"] = $db->find("tugas", "tugas_id='$id'");
         } else {
-            $rows["skemas"] = $db->find("skema", "skema_id>0");
+            $rows["tugas"] = $db->find("tugas", "tugas_id>0");
         }
 
         echo $parser->render("layout.html", $rows);

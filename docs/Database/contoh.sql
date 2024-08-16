@@ -26,12 +26,32 @@ INDEX idx_username (`username`),
 INDEX idx_email (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+# =============================
+# (2) TABLE: tugas
+# =============================
+CREATE TABLE `tugas` (
+`tugas_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Tugas',
+`tgl_tugas` DATETIME NOT NULL COMMENT 'Tanggal jatuh tempo',
+`judul` VARCHAR(128) COMMENT 'Judul tugas',
+`status_tugas` VARCHAR(32) COMMENT 'Status tugas, misalnya: baru/selesai',
+PRIMARY KEY (`tugas_id`),
+INDEX idx_tgl_tugas (`tgl_tugas`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 # -----------------------------
 # DATA: user
 # -----------------------------
 INSERT INTO `user` (`user_id`, `username`, `password`, `nama`, `email`) VALUES('1', 'demo', '5f4dcc3b5aa765d61d8327deb882cf99', 'Demo', 'demo@domaindemo.com');
 INSERT INTO `user` (`user_id`, `username`, `password`, `nama`, `email`) VALUES('2', 'kancil', '5f4dcc3b5aa765d61d8327deb882cf99', 'Kancil', 'kancil@domaindemo.com');
+# -----------------------------
+
+# -----------------------------
+# DATA: tugas
+# -----------------------------
+INSERT INTO `tugas` (`tugas_id`, `tgl_tugas`, `judul`, `status_tugas`) VALUES('1', '2024-08-17', 'Pasang Bendera', 'baru');
+INSERT INTO `tugas` (`tugas_id`, `tgl_tugas`, `judul`, `status_tugas`) VALUES('2', '2024-08-17', 'Ikut upacara', 'baru');
+INSERT INTO `tugas` (`tugas_id`, `tgl_tugas`, `judul`, `status_tugas`) VALUES('3', '2024-08-17', 'Ikut lomba', 'baru');
+INSERT INTO `tugas` (`tugas_id`, `tgl_tugas`, `judul`, `status_tugas`) VALUES('4', '2024-08-17', 'Mengecat rumah', 'baru');
 # -----------------------------
 
 # === END OF SQL ==============
