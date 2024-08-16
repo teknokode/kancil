@@ -3,10 +3,10 @@ namespace App\Controllers;
 
 use Kancil\Core\Database;
 use Kancil\Core\Api;
+use Kancil\Core\Auth;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-
 
 class Testapi
 {
@@ -20,9 +20,32 @@ class Testapi
     public function auth()
     {
         $api = new Api;
+        $auth = new Auth;
+        $db = new Database();
 
-        $jwt = $api->requestAuth();
-        print $api->responseJSON( ["auth" => $jwt ] );
+        $req = $api->requestJSON();
+
+        $username = $req["username"];
+        $password = $req["password"];
+
+        if ( $auth->userLogin($db, $username, md5($password)) )
+        {
+            $payload = [
+                'username' => $username,
+                "sub"=> "Authorization", 
+                "iss"=> "Kancil Framework", 
+                'iat' => time(),
+                'exp' => time()+2592000 // 30 hari 
+            ];
+
+            $jwt = $auth->createJwtToken( $payload );
+            print $api->responseJSON( ["token" => $jwt ] );
+
+        } else {
+
+            print $api->responseError( "Username atau password tidak valid", 401);
+
+        }
     }
 
     public function token()
@@ -30,16 +53,16 @@ class Testapi
         $api = new Api;
 
         $payload = [
-            'username' => 'udin',
-            'domain' => 'http://www.contoh.com',
-            'iat' => 1356999524,
-            'exp' => 1357000000
+            'username' => "udin",
+            "sub"=> "Authorization", 
+            "iss"=> "Kancil Framework", 
+            'iat' => time(),
+            'exp' => time()+2592000 // 30 hari 
         ];
 
         $jwt = JWT::encode($payload, SECRET_KEY, 'HS256');
         print $api->responseJSON( ["token" => $jwt ] );
     }
-
 
     public function skema()
     {
