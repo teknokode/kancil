@@ -10,20 +10,25 @@ use Firebase\JWT\Key;
 
 class Testapi
 {
+    protected $api;
+
+    public function __construct()
+    {
+        $this->api = new Api;
+    }
+
     public function index()
     {
-        $api = new Api;
-        $json = $api->requestJSON();
-        print $api->responseJSON( $json );
+        $json = $this->api->requestJSON();
+        print $this->api->responseJSON( $json );
     }
 
     public function auth()
     {
-        $api = new Api;
         $auth = new Auth;
         $db = new Database();
 
-        $req = $api->requestJSON();
+        $req = $this->api->requestJSON();
 
         $username = $req["username"];
         $password = $req["password"];
@@ -39,7 +44,7 @@ class Testapi
             ];
 
             $jwt = $auth->createJwtToken( $payload );
-            print $api->responseJSON( ["token" => $jwt ] );
+            print $this->api->responseJSON( ["token" => $jwt ] );
 
         } else {
 
@@ -50,8 +55,6 @@ class Testapi
 
     public function token()
     {
-        $api = new Api;
-
         $payload = [
             'username' => "udin",
             "sub"=> "Authorization", 
@@ -61,15 +64,14 @@ class Testapi
         ];
 
         $jwt = JWT::encode($payload, SECRET_KEY, 'HS256');
-        print $api->responseJSON( ["token" => $jwt ] );
+        print $this->api->responseJSON( ["token" => $jwt ] );
     }
 
     public function skema()
     {
         $db = new Database;
-        $api = new Api;
 
         $data = $db->select("skema","*");
-        print $api->responseJSON( $data );
+        print $this->api->responseJSON( $data );
     }
 }
