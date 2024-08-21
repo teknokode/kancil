@@ -33,6 +33,7 @@ class Home extends BaseController
             $rows["tugas"] = $db->find("tugas", "tugas_id>0");
         }
 
-        echo $parser->render("layout.html", $rows);
+        return $parser->render("layout.html", $rows);
+        //return $parser->render("admin/admin.html", $rows);
     }
 }

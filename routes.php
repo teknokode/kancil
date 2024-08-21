@@ -6,6 +6,9 @@ $router->get('/home', "App\Controllers\Home::index");
 $router->get('/tugas/:id', "App\Controllers\Home::index");
 $router->get('/tugas', "App\Controllers\Home::index");
 
+// Contoh halaman admin
+$router->get('/admin', "App\Controllers\Admin\Admin::index");
+
 // Contoh route untuk API
 $router->get('/api', "App\Controllers\Testapi::index");
 $router->get('/api/auth', "App\Controllers\Testapi::auth");
