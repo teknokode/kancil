@@ -13,7 +13,6 @@ class Admin extends BaseController
     {
         $parser = new Parser;
         return $parser->render("admin/admin.html", []);
-
     }
 }
 
