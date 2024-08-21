@@ -5,6 +5,8 @@ use Kancil\Core\Database;
 use Kancil\Core\Api;
 use Kancil\Core\Auth;
 
+use App\Models\TugasModel;
+
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
@@ -69,12 +71,15 @@ class Testapi
 
     public function tugas()
     {
-        $db = new Database;
+        //$db = new Database;
+        $tugas = new TugasModel; // Model
 
         //print_r($_SERVER);
         //die();
 
-        $data = $db->select("tugas","*");
+        //$data = $db->select("tugas","*");
+        $data = $tugas->getAll();
+        
         return $this->api->responseJSON( $data );
     }
 }
