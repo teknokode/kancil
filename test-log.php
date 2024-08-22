@@ -12,8 +12,6 @@ for($i=1; $i<=200; $i++)
 }
 
 //file_put_contents("./storage/Logs/logs.txt", $str);
-
-
 //function errorHandler(int $errNo, string $errMsg, string $file, int $line) {
 function errorHandler() 
 {
@@ -53,12 +51,11 @@ function errorHandler()
             $file = $error["file"];
             $line = $error["line"];
             $message = preg_replace('/(\s\s+|\t|\n)/', ' ', $error["message"]);
-            //print_r($error);
-
             $str = "$type - $file [$line] - $message";
             addLog( __DIR__."/storage/Logs/logs.txt", $str );
 
-            print "Ada yang tidak beres, silakan periksa log error.";
+            print "Ada kesalahan, silakan periksa log error.";
+            // Ganti dengan tampilan yang lebih baik
         }
     }
     return false;
@@ -79,6 +76,5 @@ function addLog( $filename, $log)
         $lines = array_slice( $lines, $remove );
     }
     $lines[] = date("Y-m-d H:i:s") . ": $log\n";
-
     file_put_contents( $filename, substr(implode( "\n", $lines ),0,-1));
 }

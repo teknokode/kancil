@@ -32,6 +32,10 @@ if ($_ENV["MODE"]=="development")
     ini_set('display_startup_errors', '0');
 }
 
+// Register fungsi penanganan error
+// register_shutdown_function('errorHandler');
+
+// Path dan URL
 $_ENV["BASE_URL"] = rtrim( $_ENV["BASE_URL"],"/");        
 $_ENV["APP_PATH"] = __dir__;
 
