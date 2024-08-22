@@ -1,7 +1,6 @@
 <?php
 namespace App\Controllers;
 
-use Kancil\Core\Database;
 use Kancil\Core\Api;
 use Kancil\Core\Auth;
 
@@ -71,11 +70,7 @@ class Testapi
 
     public function tugas()
     {
-        //$db = new Database;
-        $tugas = new TugasModel; // Model
-
-        //print_r($_SERVER);
-        //die();
+        $tugas = new TugasModel; 
 
         //$data = $db->select("tugas","*");
         $data = $tugas->getAll();
