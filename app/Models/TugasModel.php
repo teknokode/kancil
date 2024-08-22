@@ -10,7 +10,7 @@ class TugasModel // Harus di extends dari core Model
     protected $primaryKey = "tugas_id";
     protected $db;
 
-    //  Seharusnya fungsi ini ada di core Model
+    // Seharusnya fungsi ini ada di core Model
     public function __construct()
     {
         $this->db = new Database;
@@ -20,4 +20,5 @@ class TugasModel // Harus di extends dari core Model
     {
         return $this->db->select( $this->tableName ,"*"); 
     }
+    // Seharusnya fungsi ini ada di core Model ^^^
 }
