@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use Kancil\Core\Api;
 use Kancil\Core\Auth;
+use Kancil\Core\Database;
 
 use App\Models\TugasModel;
 
@@ -72,8 +73,7 @@ class Testapi
     {
         $tugas = new TugasModel; 
 
-        //$data = $db->select("tugas","*");
-        $data = $tugas->getAll();
+        $data = $tugas->get();
         
         return $this->api->responseJSON( $data );
     }

@@ -17,9 +17,14 @@ class TugasModel extends Model
     //     $this->db = new Database;
     // }
     
-    public function getAll()
-    {
-        return $this->db->select( $this->tableName ,"*"); 
-    }
+    // public function get()
+    // {
+    //     return $this->db->get( $this->tableName ,"*"); 
+    // }
+
+    // public function find()
+    // {
+    //     return $this->db->get( $this->tableName ,"*"); 
+    // }
     // Seharusnya fungsi ini ada di core Model ^^^
 }
