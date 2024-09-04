@@ -508,12 +508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/teknokode/kancil-framework.git",
-                "reference": "76a2ebde74ef1b225e1da8a93290fd01acf40610"
+                "reference": "69bb79c13a38e92b152263cc2642fbf1fcdbdc77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/teknokode/kancil-framework/zipball/76a2ebde74ef1b225e1da8a93290fd01acf40610",
-                "reference": "76a2ebde74ef1b225e1da8a93290fd01acf40610",
+                "url": "https://api.github.com/repos/teknokode/kancil-framework/zipball/69bb79c13a38e92b152263cc2642fbf1fcdbdc77",
+                "reference": "69bb79c13a38e92b152263cc2642fbf1fcdbdc77",
                 "shasum": ""
             },
             "require": {
@@ -538,12 +538,13 @@
                 {
                     "name": "Pino Ruswana",
                     "role": "Developer",
-                    "email": "apenta.hosting@gmail.com"
+                    "email": "pino.ruswana@gmail.com"
                 }
             ],
             "description": "Framework MVC PHP",
             "keywords": [
                 "framework",
+                "indonesia",
                 "kancil",
                 "php"
             ],
@@ -551,7 +552,7 @@
                 "source": "https://github.com/teknokode/kancil-framework/tree/main",
                 "issues": "https://github.com/teknokode/kancil-framework/issues"
             },
-            "time": "2024-09-03T15:35:38+00:00"
+            "time": "2024-09-04T15:12:28+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
